@@ -8,6 +8,7 @@ public class LoginButton : MonoBehaviour
 {
     public Dropdown dropdown;
     public GameObject message;
+    public PopUpManager popUpManager;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class LoginButton : MonoBehaviour
         else
         {
             Debug.Log("まだ役職が選ばれていません");
+            popUpManager.showPopUp("まだ役職が\n選ばれていません");
             message.SetActive(true);
             //3sec後にメッセージを消す
             Invoke(nameof(DeleteMessage), 2.0f);

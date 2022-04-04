@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class NameField : MonoBehaviour
 {
   //オブジェクトと結びつける
+
   public InputField inputField;
   public Text text;
 
@@ -18,5 +19,6 @@ public class NameField : MonoBehaviour
     public void InputText(){
         //テキストにinputFieldの内容を反映
         text.text = inputField.text;
+        Debug.Log("出てる・");
     }
 }
